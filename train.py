@@ -25,4 +25,4 @@ X=df[['sqft','bedrooms',"bathrooms",'age_years',"garage","location_score"]]
 y=df['price']
 
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=42)
-# mlflow.set_experiment("mlops-house-price-prediction")
+mlflow.set_experiment("mlops-house-price-prediction")
