@@ -32,8 +32,9 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Mock - SSH into EC2 and redeploy
-          run: echo "docker house-prediction-model"
-               echo "docker stop house-prediction-model"
-               echo "docker rm house-prediction-model"
-               echo "docker run "
-               echo "Public ip : 56.7.7.7:8000"
+          run: |
+            echo "docker pull house-preiction-model"
+            echo "docker stop"
+            echo "docker rm"
+            echo "docker run"
+            echo "Public ip : 56.7.7.7:8000"
