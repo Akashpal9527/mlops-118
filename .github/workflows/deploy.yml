@@ -1,4 +1,4 @@
-name: Mock Deploy Pipeline (Test)
+name : Mock Deploy Pipeline (Test)
 
 on:
   push:
@@ -6,12 +6,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  mock-build:
-    runs-on: ubuntu-latest
-    outputs:
-      image: ${{ steps.build.outputs.image }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Mock - Configure AWS credentials
+    mock-build:
+      runs-on: ubuntu-latest
+      outputs:
+        image: ${{steps.build.outputs.image}}
+      steps:
+        - name: Checkout Code
+          uses: actions/checkout@v4
+
+        - name: Mock - Configure AWS credentials
           run: echo "aws-configuration Test"
