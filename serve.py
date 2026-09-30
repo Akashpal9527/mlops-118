@@ -25,6 +25,7 @@ class HouseFeatures(BaseModel):
     bedrooms: int = Field(...,gt=0,le=20)
     bathrooms: int = Field(...,gt=0,le=200)
     age_years: int = Field(...,gt=0 , le=10)
+    garage: int = Field(..., ge=0, le=10)
     location_score: int = Field(...,ge=1 , le=10)
     
 
@@ -33,7 +34,7 @@ def health():
     return {"status":"healthy","model":MODEL_URI}
 
 @app.post("/predict")
-def perict(features:HouseFeatures):
+def predict(features:HouseFeatures):
     input_df=pd.DataFrame([features.model_dump()],columns=FEATURES)
     prediction = model.predict(input_df)[0]
     return {"predicted_price": round(float(prediction), 2)}

@@ -1,0 +1,56 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python build files
+*.egg-info/
+dist/
+build/
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Local MLflow
+mlruns/
+
+# Local data
+data/
+datasets/
+
+# Temporary files
+tmp/
+temp/
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+
+# Documentation
+README.md
