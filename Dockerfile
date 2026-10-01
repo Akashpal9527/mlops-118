@@ -11,7 +11,7 @@ RUN apt-get update && \
     curl && \
     rm -rf /var/lib/apt/lists/*
 
-COPY requirements-docker.txt /app/requirements-docker.txt
+COPY requirements.txt /app/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements-docker.txt
