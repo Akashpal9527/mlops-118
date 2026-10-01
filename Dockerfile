@@ -11,7 +11,7 @@ COPY serve.py .
 COPY static ./static
 
 # FIX: Sirf model folder copy kar rahe hain
-COPY house_model ./house_model
+# COPY house_model ./house_model
 
 EXPOSE 8000
 
