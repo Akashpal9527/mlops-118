@@ -14,7 +14,7 @@ RUN apt-get update && \
 COPY requirements.txt /app/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements-docker.txt
+    pip install --no-cache-dir -r requirements.txt
 
 COPY serve.py /app/serve.py
 COPY static/ /app/static/
